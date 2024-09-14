@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Твитер.ру</title>
+<link rel="icon" href="File/Ico.ico" type="image/x-icon">
+</head>
+<body class="white-theme">
+<link rel="stylesheet" type="text/css" href="File/CSS.css">
+<img style="height:50px;width:50px<" src='File/Ico.ico';>
+<h1 id="Name">Твитер.ру</h1>
+<button id="theme" class="btn-toggle">
+  <img src="File/theme.png" width="16" height="16" alt="тема">
+</button>
+<style>
+button.btn-toggle {
+ width: 30px; height: 30px;
+ background-color: #ffffff;
+ border-radius: 50%;
+ border: none;
+}
+</style>
+<script>
+// Выбираем кнопку
+const btn = document.querySelector(".btn-toggle");
+// Выбираем настройки темы из localStorage
+const currentTheme = localStorage.getItem("theme");
+// Если текущая тема в localStorage равна "dark"…
+if (currentTheme == "dark") {
+  // …тогда мы используем класс .dark-theme
+  document.body.classList.add("dark-theme");
+}
+
+// Отслеживаем щелчок по кнопке
+btn.addEventListener("click", function () {
+  // Переключаем класс .dark-theme при каждом щелчке
+  document.body.classList.toggle("dark-theme");
+  // Допустим, тема светлая
+  let theme = "light";
+  // Если <body> содержит класс .dark-theme…
+  if (document.body.classList.contains("dark-theme")) {
+    // …тогда делаем тему тёмной
+    theme = "dark";
+  }
+  // После чего сохраняем выбор в localStorage
+  localStorage.setItem("theme", theme);
+});</script>
+<h2><a href="File\Site\Роман Романов\Роман Романов.html">Роман Романов</a></h2>
+<img style="height:295px;width:450px" src='File\Post\Роман Романов_Post1.jpg';>
+<h3>Я с братком💪</h3>
+<h2><a href="File\Site\Skazochnaya\Skazochnaya.html">Skazochnaya</a></h2>
+<video style="height:524px;width:288px" controls="controls";>
+    <source src='File\Post\Skazochnaya_Post1.mp4'>
+</video>
+<h3>Кабачки🤣🤣🤣</h3>
+<h2><a href="File\Site\Im_Mr_Just\Im_Mr_Just.html">Im_Mr_Just</a></h2>
+<img style="height:250px;width:250px" src='File\Post\Im_Mr_Just_Post1.jpg';>
+<h3>Это чо за...?</h3>
+<a id="add" href="https://ru.wikipedia.org/wiki/Морковь_посевная"> <img src="File\Post\add\FREE_CARROT.jpg" alt="Реклама марковки" style="height:250px;width:250px;"></a>
+<div id="offer"><h3>Предложение</br></h3></div>
+<Legend>onclick="window.location.href(На всякий)</Legend>
+</body>
+</html>
